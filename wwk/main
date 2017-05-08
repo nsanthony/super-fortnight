@@ -1,0 +1,18 @@
+#! /Users/nsanthony/miniconda3/bin/python
+from room import room
+from do import do
+#from error import error
+
+
+loc = 'woods'
+location = room(loc)
+print(location.descript)
+location = do(location)
+
+destination = room('woods')
+if location.name == destination.name:
+    print('In the distance you see a cottage')
+    locaiton = do(location)
+
+
+
