@@ -15,5 +15,5 @@ int main() {
 	cout << woods.name << endl;
 	cout << woods.descript << endl;
 	cout << woods.people << endl;
-// 	jump();
+ 	jump(woods);
 }

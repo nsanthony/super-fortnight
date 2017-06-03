@@ -26,5 +26,8 @@ void ROOM::set_people(string x){
 	people = x;
 };
 
-
-// void jump();
+//jump definition
+void jump(ROOM r){
+	cout << "Congrats, you jumped. Don't you feel special.\n";
+//	cout << r.descript << endl;
+}
