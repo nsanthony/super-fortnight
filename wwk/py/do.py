@@ -9,5 +9,6 @@ def do(location):
     act = 1
     while act != 0:
         [act,location] = action(location)
+        print()
     
     return location

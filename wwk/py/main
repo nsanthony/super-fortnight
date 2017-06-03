@@ -1,20 +1,22 @@
-#! /Users/nsanthony/miniconda3/bin/python
+#! /home/nsanthony/miniconda3/bin/python
 from room import room
 from visable import visable
 from do import do
+from rooms.room_list import room_map
 #from error import error
 
 
 loc = 'woods'
 location = room(loc)
-vis = visable(location=location)
-location.vis = vis
+#vis = visable(location=location)
+#location.vis = vis
 print(location.descript)
 location = do(location)
 
 destination = room('woods')
 if location.name == destination.name:
     print('In the distance you see a cottage')
+    room_map['cottage'].seen = 1
     locaiton = do(location)
 
 
