@@ -8,5 +8,7 @@ blank.size = 'You cant see the edge'
 blank.occupied = 0
 blank.people = 'There is no one in this room with you'
 blank.coord = [0,0]
+blank.seen = 0
+blank.vis = {}
 
 name = blank

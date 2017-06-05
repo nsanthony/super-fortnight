@@ -2,21 +2,29 @@
 from room import room
 from visable import visable
 from do import do
+from action import actions
+from inventory.inventory_class import inventory 
 from rooms.room_list import room_map
+from people.people_list import people_list
+from weapons.weapon_list import weapon_list
+from inventory.inventory_list import inventory_list
 #from error import error
 
-
+pc = people_list['pc']
+pc.weapon = weapon_list['stick']
+pc.bag = {pc.weapon.name:pc.weapon}
 loc = 'woods'
 location = room(loc)
 #vis = visable(location=location)
 #location.vis = vis
 print(location.descript)
+actions['hell'](location)
 location = do(location)
 
 destination = room('woods')
 if location.name == destination.name:
     print('In the distance you see a cottage')
-    room_map['cottage'].seen = 1
+    room_map['outside cottage'].seen = 1
     locaiton = do(location)
 
 
