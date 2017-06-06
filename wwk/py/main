@@ -1,31 +1,28 @@
 #! /home/nsanthony/miniconda3/bin/python
-from room import room
+from room_finder import room_finder
 from visable import visable
 from do import do
 from action import actions
-from inventory.inventory_class import inventory 
 from rooms.room_list import room_map
 from people.people_list import people_list
 from weapons.weapon_list import weapon_list
-from inventory.inventory_list import inventory_list
 #from error import error
 
 pc = people_list['pc']
-pc.weapon = weapon_list['stick']
+pc.weapon = weapon_list['sword']
+pc.armor = 4
 pc.bag = {pc.weapon.name:pc.weapon}
-loc = 'woods'
-location = room(loc)
-#vis = visable(location=location)
-#location.vis = vis
-print(location.descript)
+loc = 'stone_room'
+location = room_finder(loc)
+location.been = 1
+location = actions['look'](location)
 actions['hell'](location)
-location = do(location)
-
-destination = room('woods')
-if location.name == destination.name:
-    print('In the distance you see a cottage')
-    room_map['outside cottage'].seen = 1
-    locaiton = do(location)
+[location,pc] = do(location,pc)
+if room_map['skellington_room'].been > 0:
+    print('got here')
+    location.name = 'skellington_room'
+    room_map['another_stone_room'].name = location.name
+    [location,pc] = do(location,pc)
 
 
 

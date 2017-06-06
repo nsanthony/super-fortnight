@@ -8,7 +8,7 @@ blank.descript = 'This is a plane old cottage....'
 blank.size = 'small'
 blank.occupied = 1
 blank.people = 'Shia Lebuff sharpening an axe'
-blank.coord = [1,2]
+blank.coord = [1,2,-1]
 blank.seen = 0
 cottage = blank
 

@@ -1,7 +1,7 @@
 #! /Users/nsanthony/miniconda3/bin/python
 from actions import action_set
 
-def hell(location):
+def hell(location,option=None):
     """This prints all of the possible commands, needs definition"""
     action = {
         'nothing':action_set.nothing,'jump':action_set.jump,

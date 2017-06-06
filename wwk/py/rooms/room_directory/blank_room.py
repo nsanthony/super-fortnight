@@ -7,4 +7,4 @@ blank.descript = 'This is a blank room'
 blank.size = 'You cant see the edge'
 blank.occupied = 0
 blank.people = 'There is no one in this room with you'
-blank.coord = [0,0]
+blank.coord = [0,0,0]

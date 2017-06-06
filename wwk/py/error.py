@@ -2,5 +2,5 @@
 
 def error():
     """Spits out that it doesnt work, needs definition"""
-    print('Nope, try again')
+    print('ERROR: ')
     return
